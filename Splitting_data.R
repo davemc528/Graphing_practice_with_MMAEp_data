@@ -1,0 +1,3 @@
+MMAE_data<- data.frame(mean_lum=c(1.000, 1.000, 0.872, 0.737, 0.759, 0.359, 0.388, 0.285, 0.218, 0.269),sd=c(0.000, 0.000, 0.119, 0.114, 0.061, 0.182 ,0.065 ,0.168, 0.011, 0.138),con=c(0,0,0.1,0.1,0.5,0.5,1.0,1.0,5.0,5.0),cell_line=c("PC3","C4-2B","PC3","C4-2B","PC3","C4-2B","PC3","C4-2B","PC3","C4-2B"))
+PC3_MMAE_data<- data.frame(mean_lum=MMAE_data$mean_lum[c(1,3,5,7,9)],sd=MMAE_data$sd[c(1,3,5,7,9)],con=MMAE_data$con[c(1,3,5,7,9)])
+C42B_MMAE_data<- data.frame(mean_lum=MMAE_data$mean_lum[c(2,4,6,8,10)],sd=MMAE_data$sd[c(2,4,6,8,10)],con=MMAE_data$con[c(2,4,6,8,10)])
