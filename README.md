@@ -1,3 +1,1 @@
 # Graphing_practice_with_MMAEp_data
-# Graphing_practice_with_MMAEp_data
-# Graphing_practice_with_MMAEp_data
