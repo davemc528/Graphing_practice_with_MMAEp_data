@@ -1,0 +1,2 @@
+p2 <- ggplot(data = MMAE_data,aes(x=factor(con),y=mean_lum[1:10],fill=factor(cell_line)))
+p2+geom_col(position = position_dodge(width = 1))+geom_errorbar(ymin=MMAE_data$mean_lum-MMAE_data$sd,ymax=MMAE_data$mean_lum+MMAE_data$sd, position = position_dodge(width = 1)
