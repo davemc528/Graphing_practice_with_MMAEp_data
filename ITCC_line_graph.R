@@ -4,3 +4,5 @@ p+geom_line()+geom_errorbar(ymax=mean_lum+lum_se,ymin=mean_lum-lum_se)+ylim(2,8)
 #there's obviously more to play around with in this; i need to sit down with a ggplot book to get a better handle on the aesthetics
 p+geom_line()+geom_errorbar(ymax=mean_lum+lum_se,ymin=mean_lum-lum_se)+ylim(2,8)+ggtitle("intratibial cancer cell injection")+labs(x="Days post surgery",y="Mean luminescence (log)")+theme_classic()
 #takes away the grid background with theme_classic
+p+geom_line()+geom_point()+geom_errorbar(ymax=mean_lum+lum_se,ymin=mean_lum-lum_se)+ylim(2,8)+ggtitle("intratibial cancer cell injection")+labs(x="Days post surgery",y="Mean luminescence (log)")+theme_classic()
+#add points to the line with geom_line
