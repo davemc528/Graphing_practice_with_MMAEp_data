@@ -18,3 +18,6 @@ treat_21day_mean <- mean(as.numeric(Mouse_luminescence_tracking$`	Treatment`[21:
 treat_14day_se <- sd(as.numeric(Mouse_luminescence_tracking$`	Treatment`[11:20]))/sqrt(10)
 treat_7day_mean <- mean(as.numeric(Mouse_luminescence_tracking$`	Treatment`[1:10]));treat_7day_se <- sd(as.numeric(Mouse_luminescence_tracking$`	Treatment`[1:10]))/sqrt(10)
 mouse_data_update <- data.frame("post.surgery"=c(7,14,21,28),mean_lum=c(con_7day_mean,con_14day_mean,con_21day_mean,con_28day_mean,treat_7day_mean,treat_14day_mean,treat_21day_mean,treat_28day_mean),lum_se=c(con_7day_se,con_14day_se,con_21day_se,con_28day_se,treat_7day_se,treat_14day_se,treat_21day_se,treat_28day_se),group=rep(c("con","treat"),each=4))
+#added color aesthetic to the ggplot assignment, and it added colors automatically by using the factor group
+p <- ggplot(data = mouse_data_update,mapping = aes(x=post.surgery,y=mean_lum,group=group, color=group))
+p+geom_line(size=0.75)+geom_point(size=2)+theme_classic()+geom_errorbar(aes(ymax=mean_lum+lum_se,ymin=mean_lum-lum_se),size=0.75)
