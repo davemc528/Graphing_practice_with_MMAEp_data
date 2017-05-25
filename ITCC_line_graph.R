@@ -21,3 +21,7 @@ mouse_data_update <- data.frame("post.surgery"=c(7,14,21,28),mean_lum=c(con_7day
 #added color aesthetic to the ggplot assignment, and it added colors automatically by using the factor group
 p <- ggplot(data = mouse_data_update,mapping = aes(x=post.surgery,y=mean_lum,group=group, color=group))
 p+geom_line(size=0.75)+geom_point(size=2)+theme_classic()+geom_errorbar(aes(ymax=mean_lum+lum_se,ymin=mean_lum-lum_se),size=0.75)
+#used a color blind friendly color palette to choose the colors for the lines and points
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+p+geom_line(size=0.75)+geom_point(size=2)+theme_classic()+geom_errorbar(aes(ymax=mean_lum+lum_se,ymin=mean_lum-lum_se),size=0.75)+xlab("Days Post Inoculation")+ylab("Mean Radiance (log p/s/cm2/sr)")+scale_color_manual(values = cbPalette)
+
