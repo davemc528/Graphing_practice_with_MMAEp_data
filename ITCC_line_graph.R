@@ -8,7 +8,8 @@ p+geom_line()+geom_point()+geom_errorbar(ymax=mean_lum+lum_se,ymin=mean_lum-lum_
 #add points to the line with geom_line
 p+geom_line()+geom_point()+theme_classic()+geom_errorbar(aes(ymax=mean_lum+lum_se,ymin=mean_lum-lum_se))
 #went back and found out that the zeros in the data set were being treated as characters, so I went back and cleaned up the mouse_data_updated data frame from Mouse_luminescence_tracking
-#code for correctly generating the data frame is belowcon_28day_mean <- mean((as.numeric(Mouse_luminescence_tracking$Control[31:40])));con_28day_se <- sd(as.numeric(Mouse_luminescence_tracking$Control[31:40]))/sqrt(10)
+#code for correctly generating the data frame is below
+con_28day_mean <- mean((as.numeric(Mouse_luminescence_tracking$Control[31:40])));con_28day_se <- sd(as.numeric(Mouse_luminescence_tracking$Control[31:40]))/sqrt(10)
 con_21day_mean <- mean((as.numeric(Mouse_luminescence_tracking$Control[21:30])));con_21day_se <- sd(as.numeric(Mouse_luminescence_tracking$Control[21:30]))/sqrt(10)
 con_14day_mean <- mean(as.numeric(Mouse_luminescence_tracking$Control[11:20]));con_14day_se <- sd(as.numeric(Mouse_luminescence_tracking$Control[11:20]))
 con_7day_se <- sd(as.numeric(Mouse_luminescence_tracking$Control))/sqrt(10)
